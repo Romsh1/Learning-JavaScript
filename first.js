@@ -291,10 +291,319 @@
     ending with the fullname length.
 */
 
-let fullname = prompt("Please enter your full name: ");
-let size = fullname.length;
-let special = "@";
-let concat = special.concat(fullname.concat(size));
+// let fullname = prompt("Please enter your full name: ");
+// let size = fullname.length;
+// let special = "@";
+// let concat = special.concat(fullname.concat(size));
 
-let output = `Your username is ${concat}`;
-console.log(output);
+// let output = `Your username is ${concat}`;
+// console.log(output);
+
+
+//Array in JS
+// let marks = [12, 23, 45, 67, 89];
+// console.log(marks);
+// console.log(marks[marks.length - 1]);
+// marks[2] = 66;
+// console.log(marks);
+
+
+// let heroes = ["ironman", "thor", "spiderman", "Shaktiman", "Hulk"];
+// console.log(heroes.length);
+// heroes[0] = "Rom";
+// console.log(heroes);
+
+
+/* Looping over an array */
+// let heroes = ["ironman", "thor", "spiderman", "Shaktiman", "Hulk"];
+
+//Using for loop
+// for (let i = 0; i < heroes.length; i++){
+//     console.log(heroes[i]);
+// }
+
+
+//for of
+// for (let val of heroes){
+//     console.log(val);
+// }
+
+
+/*For a given array with marks of students -> [85,97,44,37,76,60]
+Find the average marks of the entire class*/
+// let marks = [85,97,44,37,76,60];
+// let sum = 0;
+// let avg;
+// for (let i = 0; i < marks.length; i++){
+//     sum += marks[i];
+// }
+// console.log(`The sum of array is ${sum}`);
+// console.log(`The average of array is ${sum/marks.length}`);
+
+/* For a given array with prices of 5 items -> [250,645,300,900,50]
+All items have an offer of 10% OFF on them. Change the array to store final price after
+applying offer. */
+// let price = [250,645,300,900,50];
+// for (let i = 0; i < price.length; i++){
+//     let val = price[i] * (10/100);
+//     price[i] -= val;
+// }
+// console.log(price);
+
+
+// let price = [250,645,300,900,50];
+// let i = 0;
+// for (let val of price) {
+//     let offer = val/10;
+//     price[i] = price[i] - offer;
+//     console.log(`Value after offer = ${price[i]}`);
+//     i++;
+// }
+
+
+// let fruits = ["Apple", "Banana", "Pomogranate"];
+// let animals = ["Squarrel", "Tiger", "Lion", "Panda", "Kiwi", "Vulture"];
+// let food = ["Momo", "Chowmein", "Fried Rice"];
+// fruits.push("Dragon Fruit", "Kiwi", "Avocado", "Pineapple");
+// fruits.pop();
+// console.log(fruits.toString());
+// console.log(fruits);
+
+//Concatenating multiple arrays
+// console.log(fruits.concat(animals, food));
+// fruits.unshift("Litchi");
+// fruits.shift();
+
+//Change is made on new array
+// animals.slice(1,5);
+// console.log(animals.slice(1,5));
+
+//Splice changes the original arrage - used to add, delete and replace elements
+// console.log(animals.splice(-4,3));
+// console.log(animals);
+
+
+// let arr = [1,2,3,4,5,6,7];
+//add element
+// console.log(arr.splice(2,0,101));
+//delete element
+// arr.splice(3,1);
+//replace element
+// arr.splice(3,0,98);
+
+
+/* 
+Practice Question
+Create an array to store companies ->
+"Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"
+a. Remove the first company from the array
+b. Remove Uber and Add Ola in its place
+c. Add Amazon at the end
+*/
+//  let companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"];
+// //a
+// companies.splice(0,1);
+// //b
+//  companies.splice(2,1,"Ola");
+// //c
+// companies.push("Amazon");
+
+
+//Functions in JS
+// function myFunction (){
+//     console.log("Welcome to Apna College!");
+//     console.log("We are learning JS.");
+// }
+// myFunction();
+
+
+//Calculate sum of two number
+// function sum(x, y){
+//     sum = x + y;
+//     return `The sum is ${sum}`;
+// }
+
+// let val = sum(90, 95);
+// console.log(val);
+
+
+
+//sum function
+// const sum = (a, b) => {
+//     console.log(a + b);
+// }
+
+//Multiplication function
+// const multiply = (a, b) => {
+//     console.log(a * b);
+// }
+
+// const printHello = () => console.log("Hello");
+
+
+//Practice Question
+/* Create a function using the "function" keyword that takes a String as
+an argument and returns the number of vowels in the string. */
+// function vowelFunc(userInput){
+//     let word = prompt("Enter a word: ");
+//     let vowel = ["a", "e", "i", "o", "u"];
+//     let count = 0;
+//     for (let i = 0; i < word.length; i++){
+//         if ((word.charAt(i) === vowel[0]) || (word.charAt(i) === vowel[1]) || (word.charAt(i) === vowel[2]) || (word.charAt(i) === vowel[3]) || (word.charAt(i) === vowel[4])) 
+//         {
+//             count += 1;
+//         }
+//     }
+//     console.log(`The count of vowel in word ${word} is ${count}`);
+// }
+
+
+//Using for loop only
+// let word = "romika";
+// let vowel = ["a", "e", "i", "o", "u"];
+// let count = 0;
+// // console.log(word.charAt(0));
+// for (let i = 0; i < word.length; i++){
+//     console.log(word.charAt(i));
+//     if ((word.charAt(i) === vowel[0]) || (word.charAt(i) === vowel[1]) || (word.charAt(i) === vowel[2]) || (word.charAt(i) === vowel[3]) || (word.charAt(i) === vowel[4])) 
+//     {
+//         count += 1;
+//     }
+// }
+// console.log(count);
+
+
+//Another method
+// function countVowels(str){
+//     let count = 0;
+//     //"ApnaCollege", count = 0
+//     for (const char of str){
+//         if(char === "a" || char === "e" || char === "i" || char === "o" || char === "u"){
+//             count++;
+//         }
+//     }
+//     console.log(count);
+// }
+
+
+/* Create an arrow function to perform the same task */
+// const vowelFunc = (userInput) => {
+//     let word = prompt("Enter a word: ");
+//     let vowel = ["a", "e", "i", "o", "u"];
+//     let count = 0;
+//     for (let i = 0; i < word.length; i++){
+//         if ((word.charAt(i) === vowel[0]) || (word.charAt(i) === vowel[1]) || (word.charAt(i) === vowel[2]) || (word.charAt(i) === vowel[3]) || (word.charAt(i) === vowel[4])) 
+//         {
+//             count += 1;
+//         }
+//     }
+//     console.log(`The count of vowel in word ${word} is ${count}`);
+// }
+
+
+
+//forEach Loop in Arrays
+// function myFunction(num) {
+//     return num;
+// }
+
+// let arr = [1,2,3,4,5];
+// arr.forEach(function printVal(val){ //val means value at each index
+//     console.log(val);
+// })
+
+
+// let arr = [1,2,3,4,5];
+// arr.forEach((val) => {
+//     console.log(val);
+// });
+
+
+// let arr = ["Dang", "Kathmandu", "Kapilvastu", "Itahari", "Banke"];
+// arr.forEach((val, idx, arr) =>{
+//     console.log(val.toUpperCase(), idx, arr);
+// });
+
+
+
+/*
+    For a given array of numbers, print the square of each value using the 
+    forEach loop.
+*/
+//Using for loop
+// let arr = [1,2,3,4,5,6,7,8,9,10];
+// let sqr;
+// for (let i = 0; i < arr.length; i++){
+//     sqr = arr[i] * arr[i];
+//     console.log(`The square of ${arr[i]} is ${sqr}`);
+// }
+
+
+//Using for each
+// let arr = [1,2,3,4,5,6,7,8,9,10];
+// arr.forEach((arr) => {
+//     console.log(arr * arr);
+// })
+
+
+// let nums = [90,98,95];
+// let newArr = nums.map((val) => {
+//     return val + 1;
+// });
+// console.log(newArr);
+
+
+// let newArray = nums.filter((val) => {
+//     return val % 2 === 0;
+// });
+// console.log(newArray);
+
+
+// let arr = [1,2,3,4];
+// const output = arr.reduce((res, curr) => {
+//     return res + curr;
+// });
+// console.log(output);
+
+
+//Returning largest value in array
+// let arr = [1,2,3,4];
+// const output = arr.reduce((res, curr) => {
+//     return res > curr ? res : curr;
+// });
+// console.log(output);
+
+
+/* Practice Questions */
+/*
+We are given array of marks of students.
+Filter out the marks of students that scored 90+
+*/
+// let marks = [90, 35, 67, 98, 95, 80, 93];
+// let highScore = marks.filter((val) => {
+//     return val > 90;
+// });
+// console.log(highScore);
+
+
+/*
+Take a number n as input from user.
+Create an array of numbers from 1 to n.
+Use the reduce method to calculate sum of all numbers in the array.
+Use the reduce method to calculate product of all numbers in the array.
+*/
+let n = prompt("Please enter a number: ");
+let arr = [];
+for (let i = 1; i <= n; i++){
+        console.log(arr.push(i));
+}
+
+const output = arr.reduce((res, curr) =>{
+    return res + curr;
+});
+console.log(`The sum of ${n} numbers in the array is ${output}`);
+
+const result = arr.reduce((res, curr) => {
+    return res * curr;
+});
+console.log(`The product of ${n} numbers in the array is ${result}`);
