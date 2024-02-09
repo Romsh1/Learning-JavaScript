@@ -592,18 +592,18 @@ Create an array of numbers from 1 to n.
 Use the reduce method to calculate sum of all numbers in the array.
 Use the reduce method to calculate product of all numbers in the array.
 */
-let n = prompt("Please enter a number: ");
-let arr = [];
-for (let i = 1; i <= n; i++){
-        console.log(arr.push(i));
-}
+// let n = prompt("Please enter a number: ");
+// let arr = [];
+// for (let i = 1; i <= n; i++){
+//         console.log(arr.push(i));
+// }
 
-const output = arr.reduce((res, curr) =>{
-    return res + curr;
-});
-console.log(`The sum of ${n} numbers in the array is ${output}`);
+// const output = arr.reduce((res, curr) =>{
+//     return res + curr;
+// });
+// console.log(`The sum of ${n} numbers in the array is ${output}`);
 
-const result = arr.reduce((res, curr) => {
-    return res * curr;
-});
-console.log(`The product of ${n} numbers in the array is ${result}`);
+// const result = arr.reduce((res, curr) => {
+//     return res * curr;
+// });
+// console.log(`The product of ${n} numbers in the array is ${result}`);
