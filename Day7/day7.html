@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor Game</title>
+    <link rel="stylesheet" href="day7.css"/>
+</head>
+<body>
+        <!-- <button id="btn1">Click me</button>
+        <button ondblclick="console.log('button was clicked two times');">
+            Click me two times!
+        </button>
+ -->
+        <!-- In-line event handling -->
+        <!-- <div>This is a div</div> -->
+        <!-- <div onmouseover="console.log('You are inside div');">This is a div</div> -->
+
+        <!-- /* Practice Question 
+    Create a toggle button that changes the screen to dark-mode
+    when clicked and light-mode when clicked again.
+    */ -->
+    <!-- <button id="mode">Click to change display mode</button>
+    <p>Welcome to my website</p> -->
+
+
+    <!-- Building rock, paper and scssisor game -->
+        <h1>Rock Paper Scissor Game</h1>
+        <div class="choices">
+            <div class="choice" id="rock">
+                <img src="./Images/rock.png">
+            </div>
+            <div class="choice" id="paper">
+                <img src="./Images/paper.png">
+            </div>
+            <div class="choice" id="scissor">
+                <img src="./Images/scissor.jpg">
+            </div>
+        </div>
+
+        <div class="score-board">
+            <div class="score">
+                <p id="user-score">0</p>
+                <p>You</p>
+            </div>
+            <div class="score">
+                <p id="comp-score">0</p>
+                <p>Comp</p>
+            </div>
+        </div>
+
+        <div class="msg-container">
+            <p id="msg">Play your move</p>
+        </div>
+</body>
+<script src="day7.js"></script>
+</html>
