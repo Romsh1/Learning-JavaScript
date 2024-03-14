@@ -1,6 +1,6 @@
 // Romika Chaudhary
 // Day 36
-// Loops, Functions and Callbacks
+// Loops, Functions and Callback
 
 //function to find the square
 function square(n) {
