@@ -22,7 +22,7 @@ let orderedArr = [1,2,3,4,5];
 let reverseArr = orderedArr.reverse();
 console.log(reverseArr);
 
-//Printin firstname according to gender
+//Printing firstname according to gender
 //Concept of obj in array
 const allUsers = [{
     firstName: "Romika",
