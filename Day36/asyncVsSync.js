@@ -19,7 +19,7 @@ setTimeout(findSumTill100, 1000)
 console.log("Hello World!");
 
 
-//Reading file - Async Function
+//Reading file - Async Functions
 const fs = require("fs");
 fs.readFile("sentence.txt", "utf-8", function(err, data){
     console.log(data);
