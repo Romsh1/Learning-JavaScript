@@ -32,4 +32,5 @@ function callback() {
     console.log(d);
 }
 
+console.log(d);
 d.then(callback)
