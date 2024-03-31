@@ -148,7 +148,7 @@ const data = [
   }
   
 //Destructuring
-const book = getBook(2);
+const book = getBook(1);
 book;
 // const title = book.title;
 // const genre = book.genres;
@@ -171,3 +171,14 @@ console.log(author, title, genres);
 const [primaryGenre, secondaryGenre, ...otherGenres] = genres;
 
 console.log(primaryGenre, secondaryGenre, otherGenres);
+
+const newGenres = [...genres, 'epic fantasy', 'romantic'];
+newGenres;
+
+//Using spread operator with objects
+const updatedBook = {book, 
+  //adding a new property
+  moviePublicationdate: '2001-12-19', 
+  //overriding existing property
+  pages};
+updatedBook;
