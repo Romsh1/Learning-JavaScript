@@ -162,6 +162,12 @@ console.log(author, title, genres);
 // const primaryGenre = genres[0];
 // const secondaryGenre = genres[1];
 
-const [primaryGenre, secondaryGenre] = genres;
+// const [primaryGenre, secondaryGenre] = genres;
 
-console.log(primaryGenre, secondaryGenre);
+// console.log(primaryGenre, secondaryGenre);
+
+
+//RestSpread Operator
+const [primaryGenre, secondaryGenre, ...otherGenres] = genres;
+
+console.log(primaryGenre, secondaryGenre, otherGenres);
