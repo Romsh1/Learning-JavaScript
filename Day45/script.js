@@ -147,3 +147,21 @@ const data = [
     return data.find((d) => d.id === id);
   }
   
+//Destructuring
+const book = getBook(2);
+book;
+// const title = book.title;
+// const genre = book.genres;
+// genre;
+// title;
+
+const {title, author, pages, publicationDate, genres, hasMovieAdaptation} = book;
+console.log(author, title, genres);
+
+//Destructuring with arrays
+// const primaryGenre = genres[0];
+// const secondaryGenre = genres[1];
+
+const [primaryGenre, secondaryGenre] = genres;
+
+console.log(primaryGenre, secondaryGenre);
