@@ -14,7 +14,7 @@ export default function App() {
   return (
     <div>
       <h1>{advice}</h1>
-      <button onClick={getAdvice}>Get advice</button>
+      <button onClick={getAdvice}>Get Advice</button>
       <p>
         You have read <strong>{count}</strong> times.
       </p>
