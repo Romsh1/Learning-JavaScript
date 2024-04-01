@@ -150,7 +150,7 @@ const data = [
   }
   
 //Destructuring
-const book = getBook(1);
+const book = getBook(3);
 book;
 // const title = book.title;
 // const genre = book.genres;
@@ -187,3 +187,7 @@ updatedBook;
 
 const summary = `${title}, a ${pages}-pages long book, was written by ${author} and published in ${publicationDate.split('-')[0]} is a book`;
 summary;
+
+//Using ternary operator
+const pagesRange = pages > 1000 ? 'Over a thousand' : 'less than 1000';
+pagesRange;
