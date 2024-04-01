@@ -150,7 +150,7 @@ const data = [
   }
   
 //Destructuring
-const book = getBook(3);
+const book = getBook(2);
 book;
 // const title = book.title;
 // const genre = book.genres;
@@ -185,7 +185,8 @@ const updatedBook = {book,
   pages};
 updatedBook;
 
-const summary = `${title}, a ${pages}-pages long book, was written by ${author} and published in ${publicationDate.split('-')[0]} is a book`;
+const summary = `${title}, a ${pages}-pages long book, was written by ${author} and published in ${publicationDate.split('-')[0]
+}. The book has ${hasMovieAdaptation ? '' : 'not'} been adapted as a movie.`;
 summary;
 
 //Using ternary operator
