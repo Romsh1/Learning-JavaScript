@@ -150,7 +150,7 @@ const data = [
   }
   
 //Destructuring
-const book = getBook(4);
+const book = getBook(3);
 book;
 // const title = book.title;
 // const genre = book.genres;
@@ -214,18 +214,19 @@ console.log(book.translations.spanish);
 const spanishTranslation = book.translations.spanish || "NOT TRANSLATED";
 spanishTranslation;
 
-console.log(book.reviews.librarything.reviewsCount);
-const countWrong = book.reviews.librarything.ratingsCount || "no data";
-countWrong;
+// console.log(book.reviews.librarything.reviewsCount);
+// const countWrong = book.reviews.librarything.ratingsCount || "no data";
+// countWrong;
 
-const count = book.reviews.librarything.reviewsCount ?? "no data";
-count;
+// const count = book.reviews.librarything.reviewsCount ?? "no data";
+// count;
 
 //Optimal Chaining
 function getTotalReviewCount(book) {
-  const goodread = book.reviews.goodreads.reviewsCount;
-  const libraryThing = book.reviews.librarything.reviewsCount;
-  return goodreads = librarything;
+  const goodreads = book.reviews.goodreads.reviewsCount;
+  const librarything = book.reviews.librarything?.reviewsCount ?? 0;
+  librarything;
+  return goodreads + librarything;
 }
 
 console.log(getTotalReviewCount(book));
