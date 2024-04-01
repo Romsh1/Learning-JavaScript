@@ -197,4 +197,19 @@ summary;
 const pagesRange = pages > 1000 ? 'Over a thousand' : 'less than 1000';
 pagesRange;
 
+//Short-circuiting and Logical Operator
+console.log(book.reviews.librarything.reviewsCount);
+const countWrong = book.reviews.librarything.ratingsCount || "no data";
+countWrong;
 
+const count = book.reviews.librarything.reviewsCount ?? "no data";
+
+
+//Optimal Chaining
+function getTotalReviewCount(book) {
+  const goodread = book.reviews.goodreads.reviewsCount;
+  const libraryThing = book.reviews.librarything.reviewsCount;
+  return goodreads = librarything;
+}
+
+console.log(getTotalReviewCount(book));
