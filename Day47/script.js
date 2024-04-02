@@ -228,3 +228,19 @@ adventureBooks;
 //The Array Reduce Method
 const pagesAllBooks = books.reduce((acc, book) => acc + book.pages, 0);
 pagesAllBooks;
+
+
+//The Array Sort Method
+const y = [3, 7, 1, 9, 6];
+//Descending order
+// const sorted = y.sort((a, b) => b - a);
+
+//Aescending order
+const sorted = y.sort((a, b) => a - b);
+sorted;
+
+//Sorting by pages
+const sortedByPages = books.slice().sort((a, b) => a.pages - b.pages);
+sortedByPages;
+
+
