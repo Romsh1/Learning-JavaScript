@@ -5,11 +5,15 @@ function List() {
                     {name: "coconut",  calories: 159}, 
                     {name: "pineapple",  calories: 37}];
     //fruits.sort((a, b) => a.name.localeCompare(b.name)); alphabetical
-    fruits.sort((a, b) => b.name.localeCompare(a.name)); //reverse alphabetical
+    // fruits.sort((a, b) => b.name.localeCompare(a.name)); //reverse alphabetical
     
-    const listItems = fruits.map(fruit => <li key={fruit.name}>
-                                            {fruit.name}: &nbsp;
-                                            <b>{fruit.calories}</b></li>);
+    // const lowCalFruits = fruits.filter(fruit => fruit.calories < 100);
+    const highCalFruits = fruits.filter(fruit => fruit.calories >= 100);
+
+
+    const listItems = highCalFruits.map(highCalFruit => <li key={highCalFruit.name}>
+                                                {highCalFruit.name}: &nbsp;
+                                                <b>{highCalFruit.calories}</b></li>);
     
     return(<ol>{listItems}</ol>);
 }
