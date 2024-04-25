@@ -1,6 +1,16 @@
 function Button() {
-    const handleClick = () => console.log("Clicked");
+    let count = 0;
+    const handleClick = (name) => {
+        if(count < 3) {
+            count++;
+            console.log(`${name} clicke me ${count} time/s`);
 
-    return(<button onClick={handleClick}>Click me</button>)
+        }else {
+            console.log(`${name} stop clicking me`);
+        }
+    };
+    // const handleClick2 = (name) => console.log(`${name} stop clicking me`);
+
+    return(<button onClick={() => handleClick("Bob")}>Click me</button>);
 }
 export default Button
