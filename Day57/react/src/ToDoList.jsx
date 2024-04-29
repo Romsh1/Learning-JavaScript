@@ -9,19 +9,33 @@ function ToDoList() {
     }
 
     function addTask() {
-
+        if(newTask.trim() !== "") {
+            setTasks(t => [...t, newTask]);
+            setNewTask("");    
+        }
     }
 
     function deleteTask(index) {
-
+        const updatedTasks = tasks.filter((_, i) => i !== index);
+        setTasks(updatedTasks);
     }
 
     function moveTaskUp(index) {
-
+        if(index > 0) {
+            const updatedTasks = [...tasks];
+            [updatedTasks[index], updatedTasks[index - 1]] = 
+            [updatedTasks[index - 1], updatedTasks[index]];
+            setTasks();
+        }
     }
 
     function moveTaskDown(index) {
-
+        if(index > 0) {
+            const updatedTasks = [...tasks];
+            [updatedTasks[index], updatedTasks[index - 1]] = 
+            [updatedTasks[index - 1], updatedTasks[index]];
+            setTasks();
+        }
     }
 
     return(
@@ -49,12 +63,12 @@ function ToDoList() {
                         Delete
                     </button>
 
-                    <button className="move-task-up"
+                    <button className="move-button"
                     onClick={() => moveTaskUp(index)}>
                         Move up
                     </button>
 
-                    <button className="move-task-down"
+                    <button className="move-button"
                     onClick={() => moveTaskDown(index)}>
                         Move down
                     </button>
