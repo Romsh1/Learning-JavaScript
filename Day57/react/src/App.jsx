@@ -1,9 +1,10 @@
 // import MyComponent from "./MyComponent.jsx";
-import ToDoList from "./ToDoList.jsx";
+import MyComponent2 from "./MyComponent2.jsx";
+// import ToDoList from "./ToDoList.jsx";
 
 function App() {
   return (
-    <ToDoList />
+    <MyComponent2 />
   );
 }
 
