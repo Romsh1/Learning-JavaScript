@@ -13,6 +13,11 @@ function MyComponent2() {
         });
     }, []);
 
+    //Updating the title when window is resized
+    useEffect(() => {
+        document.title = `Size: ${width} x ${height}`;
+    }, [width, height]);
+
     function handleResize() {
         setWidth(window.innerWidth);
         setHeight(window.innerHeight);
