@@ -6,7 +6,7 @@ function MyComponent() {
 
     useEffect(() => {
         document.title = `Count: ${count} ${color}`;
-    }, [count]);
+    }, [count, color]);
 
     function addCount() {
         setCount(c => c + 1);
