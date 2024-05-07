@@ -12,10 +12,17 @@ function MyComponent() {
 
     const [randomQuote, setRandomQuote] = useState("");
 
+    function generateQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        setRandomQuote(quotes[randomIndex]);
+    }
+
     return(<div>
-                <h2>Random Quote Generator</h2>
-                <button onClick={handleQuoteGenerator}>Generate Quote</button>
+                <h1>Random Quote Generator</h1>
+                <button onClick={generateQuote}>Generate Quote</button>
+                <p className="quote">{randomQuote}</p>
             </div>
     );
 }
 export default MyComponent
+
