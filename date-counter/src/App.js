@@ -18,19 +18,19 @@ function App() {
 
 
   function handleSubtract() {
-    setCount(count - 1);
+    setCount(count - step);
   }
   
   function handleAdd() {
-    setCount(count + 1);
+    setCount(count + step);
   }  
 
   return (
     <>
       <div className="btnStep">
-        <button>-</button>
-        <span>Step: 1</span>
-        <button>+</button>
+        <button onClick={() => setStep((c) => c - 1)}>-</button>
+        <span>Step: {step}</span>
+        <button onClick={() => setStep((c) => c + 1)}>+</button>
       </div>
       <div className="btnCount">
         <button onClick={handleSubtract}>-</button>
