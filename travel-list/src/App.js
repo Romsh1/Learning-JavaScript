@@ -37,13 +37,17 @@ function PackingList() {
 }
 
 function Item({item}) {
-  return <li>{item.description}</li>
+  return (
+    <li>
+      {item.description}
+    </li>
+  );
 }
 
 function Stats() {
   return <footer className="stats">
     <em>
-    🎒You have x items on your list, and you already packed x (x%)
+      🎒You have x items on your list, and you already packed x (x%)
     </em>
   </footer>
 }
