@@ -27,16 +27,27 @@ function App() {
 
   return (
     <>
-      <div className="btnStep">
-        <button onClick={() => setStep((c) => c - 1)}>-</button>
+
+      <div>
+        <input type="range" min="0" max="10" value={step} 
+          onChange={(e) => setStep(Number(e.target.value))} 
+        />
         <span>Step: {step}</span>
-        <button onClick={() => setStep((c) => c + 1)}>+</button>
       </div>
-      <div className="btnCount">
-        <button onClick={handleSubtract}>-</button>
-        <span>Count: {count}</span>
-        <button onClick={handleAdd}>+</button>
-    </div>
+
+      <div className="btnStep">
+        <button onClick={() => setCount((c) => c - step)}>-</button>
+        {/* <span>Step: {step}</span> */}
+        <input type="text" value={count} 
+        onChange={(e)=>setCount(Number(e.target.value))} 
+        />
+        <button onClick={() => setCount((c) => c + step)}>+</button>
+      </div>
+      {/* <div className="btnCount"> */}
+        {/* <button onClick={handleSubtract}>-</button> */}
+        {/* <span>Count: {count}</span> */}
+        {/* <button onClick={handleAdd}>+</button> */}
+    {/* </div> */}
     {/* <p>{date.toDateString()}</p> */}
     <p>
       <span>
