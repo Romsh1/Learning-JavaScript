@@ -50,12 +50,12 @@ const tempWatchedData = [
 const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
-function NavBar() {
+function NavBar({movies}) {
   return (
     <nav className="nav-bar">
       <Logo />
       <Search />
-      <NumResults />
+      <NumResults movies = {movies} />
   </nav>
   );
 }
@@ -81,10 +81,10 @@ function Search() {
     />
 }
 
-function NumResults() {
+function NumResults({movies}) {
   return (
     <p className="num-results">
-      Found <strong>X</strong> results
+      Found <strong>{movies.length}</strong> results
     </p>
   );
 }
@@ -231,7 +231,7 @@ export default function App() {
 
   return (
     <>
-      <NavBar />
+      <NavBar movies = {movies} />
       <Main movies = {movies} />
     </>
   );
