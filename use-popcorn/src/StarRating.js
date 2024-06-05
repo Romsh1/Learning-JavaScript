@@ -11,11 +11,6 @@ const starContainerStyle = {
     // gap: '4px'
 }
 
-const textStyle = {
-    lineHeight: '1',
-    margin: '0'
-}
-
 function StarRating({ maxRating = 5, 
     color = '#fcc419', 
     size = 48 
@@ -26,6 +21,13 @@ function StarRating({ maxRating = 5,
     function handleRating(rating) {
         setRating(rating);
     }
+
+    const textStyle = {
+        lineHeight: '1',
+        margin: '0',
+        color,
+        fontSize: `${size / 1.5}px`
+    }    
 
     return (
         <div style={containerStyle}>
@@ -38,6 +40,8 @@ function StarRating({ maxRating = 5,
                              rating >= i + 1}
                         onHoverIn={() => setTempRating(i + 1)}
                         onHoverOut = {() => setTempRating(0)}
+                        color={color}
+                        size={size}
                         />
                 ))}
             </div>
@@ -46,14 +50,14 @@ function StarRating({ maxRating = 5,
     );
 }
 
-const starStyle = {
-    width: '48px',
-    height: '48px',
-    display: 'block',
-    cursor: 'pointer'
-}
-
-function Star({ onRate, full, onHoverIn, onHoverOut }) {
+function Star({ onRate, full, onHoverIn, onHoverOut, color, size }) {
+    const starStyle = {
+        width: `${size}px`,
+        height: `${size}px`,
+        display: 'block',
+        cursor: 'pointer'
+    }
+    
     return (
         <span 
             role="button" 
@@ -62,7 +66,8 @@ function Star({ onRate, full, onHoverIn, onHoverOut }) {
             onMouseEnter={onHoverIn}
             onMouseLeave={onHoverOut}
         >
-            {full ? <svg
+            {full ? 
+            <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="#000"
