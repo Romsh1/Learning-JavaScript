@@ -95,6 +95,22 @@ function Main({ children }) {
   );
 }
 
+// function Box({ element }) {
+//   const [isOpen, setIsOpen] = useState(true);
+
+//   return (
+//     <div className="box">
+//     <button
+//       className="btn-toggle"
+//       onClick={() => setIsOpen((open) => !open)}
+//     >
+//       {isOpen ? "–" : "+"}
+//     </button>
+//     {isOpen && element}
+//   </div>
+//   );
+// }
+
 function Box({ children }) {
   const [isOpen, setIsOpen] = useState(true);
 
@@ -235,9 +251,19 @@ export default function App() {
         <NumResults movies={movies} />
       </NavBar>
       <Main>
+        {/* <Box element = {<MovieList movies={movies} />} /> 
+        <Box 
+          element={ <>
+                      <WatchedSummary watched={watched} />
+                      <WatchedMoviesList watched={watched} />
+                    </>
+                  } 
+        /> */}
+
         <Box>
           <MovieList movies={movies} />
         </Box>
+        
         <Box>
             <WatchedSummary watched={watched} />
             <WatchedMoviesList watched={watched} />
