@@ -127,7 +127,7 @@ function Box({ children }) {
   );
 }
 
-/*
+
 function WatchedBox() {
   const [watched, setWatched] = useState(tempWatchedData);
   const [isOpen2, setIsOpen2] = useState(true);
@@ -149,7 +149,7 @@ function WatchedBox() {
   </div>
   );
 }
-*/
+
 
 function MovieList({ movies }) {
   return (
@@ -245,7 +245,9 @@ export default function App() {
   const [movies, setMovies] = useState(tempMovieData);
   const [watched, setWatched] = useState(tempWatchedData);
 
-  fetch('http://www.omdbapi.com/?apikey=${KEY}&')
+  fetch('http://www.omdbapi.com/?apikey=${KEY}&s=intersellar').then(
+    res => res.json()
+  ).then(data=>console.log(data));
 
   return (
     <>
