@@ -239,15 +239,16 @@ function WatchedMovie({movie}) {
   );
 }
 
-const KEY = '8abb7442';
+const KEY = "8abb7442";
 
 export default function App() {
   const [movies, setMovies] = useState(tempMovieData);
   const [watched, setWatched] = useState(tempWatchedData);
 
-  fetch('http://www.omdbapi.com/?apikey=${KEY}&s=intersellar').then(
-    res => res.json()
-  ).then(data=>console.log(data));
+  fetch(`http://www.omdbapi.com/?apikey=${KEY}&
+    s=interstellar`)
+      .then((res) => res.json())
+      .then((data) => console.log(data));
 
   return (
     <>
