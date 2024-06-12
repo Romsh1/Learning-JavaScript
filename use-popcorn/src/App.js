@@ -242,17 +242,22 @@ function WatchedMovie({movie}) {
 const KEY = "8abb7442";
 
 export default function App() {
-  // const [movies, setMovies] = useState([]);
-  // const [watched, setWatched] = useState([]);
+  const [movies, setMovies] = useState([]);
+  const [watched, setWatched] = useState([]);
 
-  const [movies, setMovies] = useState(tempMovieData);
-  const [watched, setWatched] = useState(tempWatchedData);
+  // const [movies, setMovies] = useState(tempMovieData);
+  // const [watched, setWatched] = useState(tempWatchedData);
 
   useEffect(function() {
-    fetch(`http://www.omdbapi.com/?apikey=${KEY}&
-      s=interstellar`)
-        .then((res) => res.json())
-        .then((data) => console.log(data));  
+    async function fetchMovies() {
+      const res = await fetch(
+        `http://www.omdbapi.com/?apikey=${KEY}&
+        s=interste llar`
+      );
+       const data = await res.json();
+       setMovies(data.Search);
+    }
+    fetchMovies();
     }, []); /* Only run on mount i.e. when App renders for the first time */
 
 
