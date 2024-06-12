@@ -242,6 +242,9 @@ function WatchedMovie({movie}) {
 const KEY = "8abb7442";
 
 export default function App() {
+  // const [movies, setMovies] = useState([]);
+  // const [watched, setWatched] = useState([]);
+
   const [movies, setMovies] = useState(tempMovieData);
   const [watched, setWatched] = useState(tempWatchedData);
 
@@ -250,7 +253,7 @@ export default function App() {
       s=interstellar`)
         .then((res) => res.json())
         .then((data) => console.log(data));  
-  }, []); /* Only run on mount i.e. when App renders for the first time */
+    }, []); /* Only run on mount i.e. when App renders for the first time */
 
 
   return (
