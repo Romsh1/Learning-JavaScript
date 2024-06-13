@@ -242,11 +242,11 @@ function WatchedMovie({movie}) {
 const KEY = "8abb7442";
 
 export default function App() {
-  const [movies, setMovies] = useState([]);
-  const [watched, setWatched] = useState([]);
+  // const [movies, setMovies] = useState([]);
+  // const [watched, setWatched] = useState([]);
 
-  // const [movies, setMovies] = useState(tempMovieData);
-  // const [watched, setWatched] = useState(tempWatchedData);
+  const [movies, setMovies] = useState(tempMovieData);
+  const [watched, setWatched] = useState(tempWatchedData);
 
   useEffect(function() {
     async function fetchMovies() {
