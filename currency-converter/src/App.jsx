@@ -1,9 +1,22 @@
 import { useState } from "react";
 
-function App() {
+export default function App() {
   const [amount, setAmount] = useState(1);
   const [fromCurrency, setFromCurrency] = useState('EUR');
   const [toCurrency, setToCurrency] = useState('USD');
+
+  useEffect(function() {
+    async function convert() {
+      const res = await fetch(
+        `https://api.frankfurter.app/latest?amount=${amount}&from=${fromCurrency}&to=${toCurrency}`
+      );
+    
+      const data = await res.json();
+      console.log(data);
+    }
+
+    convert();
+  }, []);
 
   return (
     <div>
@@ -26,5 +39,3 @@ function App() {
     </ div>
   );
 }
-
-export default App
