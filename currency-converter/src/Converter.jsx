@@ -1,7 +1,7 @@
 function Converter() {
     return(
         <form>
-            <input type="text" id="" />
+            <input type="text"/>
             <button ></button>
         </ form>
     );
