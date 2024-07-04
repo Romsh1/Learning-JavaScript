@@ -29,12 +29,14 @@ export default function App() {
         <option value="CAD">CAD</option>
         <option value="NPR">NPR</option>
         <option value="EUR">EUR</option>
+        <option value="INR">INR</option>
       </select>
       <select value={toCurrency} onChange={(e) => setToCurrency(e.target.value)}>
         <option value="USD">USD</option>
         <option value="CAD">CAD</option>
         <option value="NPR">NPR</option>
         <option value="EUR">EUR</option>
+        <option value="INR">INR</option>
       </select>
     </ div>
   );
